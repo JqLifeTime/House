@@ -1,0 +1,240 @@
+/* pages/newhouse/newhouse.wxss *//* pages/shoplist/shoplist.wxss */
+
+.lunbo{
+	width: 100%;
+	height: 500rpx;
+}
+swiper{
+	width: 100%;
+	height: 100%;
+}
+.lunbo swiper-item .slide-image{
+	width: 100%;
+	height: 100%;
+}
+.ptactive{
+	font-size: 30rpx !important;
+	color: #000000 !important;
+}
+.shop2-title{
+	text-align: center;
+} 
+.shop2-title .st2-h3{
+	font-size: 32rpx;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    padding-top: 20rpx;
+    line-height: 72rpx;
+	
+}
+.shop2-title .st2-h4{
+	font-size: 34rpx;
+	color: #E32F2F;
+	text-align: center;
+	line-height: 40rpx;
+  font-weight: 700;
+  padding-bottom: 30rpx;
+}
+.st2-h4-active{
+  color: #00B26A !important;
+}
+.title-zj{
+	padding: 40rpx 0;
+	display: flex;
+	height: 100rpx;
+}
+.title-zj .shop2-t1{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.shop2-t1>.shop2-p{
+	font-size: 28rpx;
+	color: #999;
+}
+.shop2-t1>.shop2-h4{
+	font-size: 26rpx;
+	color: #f00;
+}
+.shop2-t1>.shop2-h4>text{
+	font-size: 34rpx;
+	font-weight: bold;
+	color: #f00;
+}
+
+/* 第二块 */
+.h2-text{
+  display: flex;
+  font-size: 30rpx;
+  padding: 20rpx 0;
+  align-items: center;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+.h2-text>text:first-child{
+  color: #999;
+  width: 150rpx;
+}
+.h2-text>text:last-child{
+  color: #333;
+  width: 560rpx;
+}
+/* 第三块 */
+.house3{
+  overflow: hidden;
+}
+.h5-title{
+  font-size: 34rpx;
+  font-weight: 700;
+  padding: 25rpx 0;
+}
+.h5-btm{
+  padding-bottom: 20rpx;
+}
+.h5-btm scroll-view{
+  white-space: nowrap;
+}
+
+.h5-btm1{
+  display: inline-block;
+  width: 260rpx;
+  margin-right: 30rpx;
+  background: #f9f9f9;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+.h5-btm1 image{
+  width: 100%;
+  height: 160rpx;
+}
+.h5-b-t1{
+  font-size: 32rpx;
+  font-weight: 700;
+  padding: 10rpx;
+}
+.h5-b-t2{
+  font-size: 28rpx;
+  color: #999;
+  display: flex;
+  padding: 0 10rpx 10rpx 10rpx;
+  justify-content: space-between;
+}
+
+/* 第四块 */
+.h4-title{
+  font-size: 34rpx;
+  font-weight: 700;
+  padding: 25rpx 0;
+}
+.h4-text{
+  display: flex;
+  font-size: 30rpx;
+  font-weight: 700;
+  line-height: 45rpx;
+  padding: 25rpx 0;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+.h4-text:last-child{
+  border-bottom: none;
+}
+.h4-text>text:first-child{
+  color: #999;
+  width: 150rpx;
+  font-weight: 100;
+}
+.h4-text>text:last-child{
+  width: 560rpx;
+}
+/* 第五块 */
+.house5{
+  overflow: hidden;
+}
+.h3-title{
+  font-size: 34rpx;
+  font-weight: 700;
+  padding: 25rpx 0;
+}
+.h3-btm{
+  padding-bottom: 20rpx;
+}
+.h3-btm scroll-view{
+  white-space: nowrap;
+}
+
+.h3-btm1{
+  display: inline-block;
+  width: 260rpx;
+  margin-right: 30rpx;
+  background: #f9f9f9;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+.h3-btm1 image{
+  width: 100%;
+  height: 160rpx;
+}
+.h3-b-t1{
+  font-size: 32rpx;
+  font-weight: 700;
+  padding: 10rpx;
+}
+.h3-b-t2{
+  font-size: 28rpx;
+  color: #999;
+  display: flex;
+  padding: 0 10rpx 10rpx 10rpx;
+  justify-content: space-between;
+}
+.h3-b-t2>text:last-child{
+  font-size: 28rpx;
+  color: #ff0000;
+  font-weight: 700;
+  display: flex;
+  padding: 0 10rpx 10rpx 10rpx;
+  justify-content: space-between;
+}
+
+.contact{
+	width: 100%;
+	height: 90rpx;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	left: 0rpx;
+	bottom: 0rpx;
+	border-top: 1rpx solid #f1f1f1;
+}
+.contact .c-phone{
+	width: 65%;
+	text-align: center;
+	height: 100%;
+	line-height: 90rpx;
+	color: #333333;
+	font-size: 28rpx;
+	font-weight: bold;
+	background: #FFFFFF;
+}
+.contact .c-name{
+	width: 35%;
+	height: 100%;
+	line-height: 90rpx;
+	background: #E32F2F;
+	text-align: center;
+}
+.contact>.c-name>view{
+	font-size: 24rpx;
+	color: #FFFFFF;
+}
+.contact .c-name view image{
+	width: 30rpx;
+	height: 30rpx;
+	vertical-align: middle;
+	margin-right: 10rpx;
+}
+
+.marb80{
+	width: 100%;
+	height: 80rpx;
+}

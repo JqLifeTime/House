@@ -1,0 +1,131 @@
+/* pages/Calculator/Calculator.wxss */
+.ji{
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.ji-title{
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: 700;
+  padding: 10rpx 0;
+}
+.ji-btm{
+  font-size: 30rpx;
+}
+.mianji{
+  display: flex;
+  padding: 0 25rpx;
+  height: 85rpx;
+  align-items: center;
+  justify-content: space-between;
+  background: #F5F5F5;
+  border-radius: 10rpx;
+  margin: 30rpx 0;
+}
+.mianji>text{
+  width: 150rpx;
+  color: #666;
+}
+.mianji>view{
+  width: 500rpx;
+  display: flex;
+  justify-content: flex-end;
+  height: 60rpx;
+  align-items: center;
+}
+.mianji>view>input{
+  width: 330rpx;
+  text-align: right;
+  padding-right: 30rpx;
+}
+.shoufu{
+  display: flex;
+  padding: 0 25rpx;
+  height: 85rpx;
+  align-items: center;
+  justify-content: space-between;
+  background: #F5F5F5;
+  border-radius: 10rpx;
+  margin: 30rpx 0;
+}
+.shoufu>text{
+  width: 150rpx;
+  color: #666;
+}
+.shoufu>view{
+  width: 500rpx;
+  display: flex;
+  justify-content: flex-end;
+  height: 60rpx;
+  align-items: center;
+}
+.shoufu>view>picker{
+  width: 100%;
+  text-align:right;
+}
+.begin{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 60rpx;
+}
+.reset{
+  width: 320rpx;
+  height: 85rpx;
+  text-align: center;
+  line-height: 85rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+}
+.start{
+  width: 320rpx;
+  height: 85rpx;
+  text-align: center;
+  line-height: 85rpx;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  background: #FC002F;
+  color: white;
+}
+
+/* 结果 */
+.Result{
+  padding: 30rpx;
+}
+.result-title{
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: 700;
+  padding-bottom: 30rpx;
+}
+.result-btm{
+  border-top: 1rpx solid #ccc;
+  border-left: 1rpx solid #ccc;
+  border-right: 1rpx solid #ccc;
+}
+.rbtm1{
+  border-bottom: 1rpx solid #ccc;
+  display: flex;
+  font-size: 30rpx;
+}
+.rbtm1>view:first-child{
+  width: 280rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-right: 1rpx solid #ccc;
+  background: #F5F5F5;
+  color: #666;
+}
+.rbtm1>view:last-child{
+  width: 390rpx;
+  height: 80rpx;
+  padding-right: 30rpx;
+  text-align: right;
+  line-height: 80rpx;
+}
+.result-title>text{
+  color: #999;
+  font-size: 28rpx;
+  font-weight: 100;
+}

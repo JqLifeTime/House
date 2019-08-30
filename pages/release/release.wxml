@@ -1,0 +1,149 @@
+<view class="stitle">
+	<view class="stitle-h3">发布找店信息</view>
+</view>
+<view>
+	<form action="" method="post" bindsubmit="back_houtai">
+	<view class="fa1-btm">
+		<view class="fa1-btm1">
+			<view class="fa1-bl">
+				<text>*</text>联系人：
+			</view>
+			<view class="fa1-br">
+				<input type="text" name="lxr" />
+			</view>
+		</view>
+		<view class="fa1-btm1">
+			<view class="fa1-bl">
+				<text>*</text>手机号码：
+			</view>
+			<view class="fa1-br">
+				<input type="number" name="phone" />
+			</view>
+		</view>
+		<view class="fa1-btm1">
+			<view class="fa1-bl">
+				<text>*</text>期望面积：
+			</view>
+			<view class="fa1-mj">
+				<input type="number" name="qmj" /><text>-</text><input type="text" name="hmj" /><text>平米</text>
+			</view>
+		</view>
+		<view class="fa1-btm1">
+			<view class="fa1-bl">
+				<text>*</text>期望租金：
+			</view>
+			<view class="fa1-mj">
+				<input type="number" name="qzj" /><text>-</text><input type="text" name="hzj" /><text>元/月</text>
+			</view>
+		</view>
+		<view class="fa1-btm1">
+			<view class="fa1-bl">
+				<text>*</text>经营行业：
+			</view>
+			<view class="fa1-hy">
+				<picker bindchange="jyhy" value="{{multiIndex}}" range="{{multiArray}}" name="jyhy1">
+					<view class="picker1">
+						<view class="arrow">{{multiArray[multiIndex]}}</view>
+					</view>
+				</picker>
+				<picker bindchange="jyhytwo" value="{{multiArrayId[multiIndex1]}}" range="{{multiArray1}}" name="jyhy2">
+					<view class="picker1">
+						<view class="arrow">{{multiArray1[multiIndex1]}}</view>
+					</view>
+				</picker>
+				<!-- <view class="tj"><navigator href="#">添加</navigator></view> -->
+			</view>
+		</view>
+		<view class="fa1-btm1">
+			<view class="fa1-bl">
+				<text>*</text>店铺类型：
+			</view>
+			<view class="fa1-dplx">
+				<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" name="dplx">
+					<view class="picker2 arrow">
+						{{array[index]}}
+					</view>
+				</picker>
+			</view>
+		</view>
+		<!-- 期望区域 -->
+		<view class="quyu">
+			<view class="fa1-btm1">
+				<view class="fa1-bl">
+					<text>*</text>期望区域：
+				</view>
+				<view class="fa1-qwqy">
+					<picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" name="qwqy">
+						<view class="picker3 arrow">
+							{{region[0]}}-{{region[1]}}-{{region[2]}}
+						</view>
+					</picker>
+				</view>
+			</view>
+		</view>
+		<!-- 期望区域 -->
+		<view class="fa1-btm2">
+			<view class="fa1-bl">
+				<text>*</text>配套设备：
+			</view>
+			<view class="fuxuan1">
+				<checkbox-group class="group" bindchange="checkboxChange" name="ptsb">
+					<view class="label-1" wx:for="{{checkboxItems}}">
+						<label>
+							<checkbox value="{{item.id}}" checked="{{fxbollean[index]}}"></checkbox>
+							<!-- <view class="label-1__icon">
+								<view class="label-1__icon-checked" style="opacity:{{item.checked ? 1: 0}}"></view>
+							</view> -->
+							<text class="label-1__text">{{item.name}}</text>
+						</label>
+					</view>
+				</checkbox-group>
+				<view class="all" bindtap="all">全选</view>
+				<view class="unall" bindtap="unall">取消</view>
+			</view>
+		</view>
+		<view class="fa1-btm2">
+			<view class="fa1-bl">
+				<text>*</text>商圈配套：
+			</view>
+			<view class="fuxuan1">
+				<checkbox-group class="group" bindchange="sqpt" name="sqpt">
+					<view class="label-1" wx:for="{{sqpt}}">
+						<label name="sqpt">
+							<checkbox value="{{item.id}}" checked="{{fxb2[index]}}"></checkbox>
+							<!-- <view class="label-1__icon">
+								<view class="label-1__icon-checked" style="opacity:{{item.checked ? 1: 0}}"></view>
+							</view> -->
+							<text class="label-1__text">{{item.name}}</text>
+						</label>
+					</view>
+				</checkbox-group>
+				<view class="all" bindtap="all1">全选</view>
+				<view class="unall" bindtap="unall1">取消</view>
+			</view>
+		</view>
+		<view class="fa1-btm1">
+			<view class="fa1-bl">
+				<text>*</text>标题描述：
+			</view>
+			<view class="fa1-br">
+				<input type="text" name="biaoti" />
+			</view>
+		</view>
+		<view class="fa1-btm2">
+			<view class="fa1-bl">
+				<text>*</text>要求描述：
+			</view>
+			<view class="fa1-br">
+				<textarea rows="5" name="yaoqiu"></textarea>
+			</view>
+		</view>
+		<view class="fa1-btm1">
+			<view class="fa1-bl"></view>
+			<view class="fa1-sub">
+				<button formType="submit">发布找店信息</button>
+			</view>
+		</view>
+	</view>
+	</form>
+</view>

@@ -1,0 +1,17 @@
+<view class='login'>
+  <view class='padd20'>
+    <view class='padd20-1'>
+      <view class='padd20-2'>
+        <view class='login-img'>
+          <!-- <image src='{{imgUrl}}{{config.logo}}'></image> -->
+          <image src='../../img/logo.jpg'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='login-text'>
+    <view>博涵房产</view>
+    <view>给你一个幸福的家</view>
+  </view>
+  <button class='login-btn' open-type="getUserInfo" bindgetuserinfo="getUser">开始使用</button>
+</view>

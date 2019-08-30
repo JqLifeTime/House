@@ -1,0 +1,19 @@
+/* pages/gsjj/gsjj.wxss */
+.gsjj{
+
+}
+.title{
+  text-align: center;
+  font-size: 34rpx;
+  font-weight: 700;
+  padding: 20rpx 0;
+}
+.detail{
+  font-size: 30rpx;
+  color: #333;
+  line-height: 50rpx;
+  text-indent: 2rem;
+}
+.gsjj>image{
+  width: 100%;
+}

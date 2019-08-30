@@ -1,0 +1,14 @@
+<view class="fabu">
+	<view bindtap='bindzhuan'>
+		<view>
+			<image src="../../img/fbxinxi.jpg"></image>
+			发布转店信息
+		</view>
+	</view>
+	<view bindtap='bindzhao'>
+		<view>
+			<image src="../../img/zdxinxi.jpg"></image>
+			发布找店信息
+		</view>
+	</view>
+</view>

@@ -1,0 +1,101 @@
+<!--pages/newhouse/newhouse.wxml-->
+<view class="lunbo">
+	<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+			<swiper-item wx:for="{{shopsimg}}" wx:key="shopsimg">
+				<image src="{{item ? item:'../../img/wp2.jpg'}}" class="slide-image" mode='center' data-index='{{index}}' bindtap='bindBanner'/>
+			</swiper-item>
+	</swiper>
+</view>
+<view class="shop2">
+	<view class="shop2-title">
+		<view class="st2-h3">{{newHouse.name}}</view>
+		<!-- <view class="st2-h4">房屋状态：{{newHouse.ctime}}</view> -->
+    <view class="st2-h4">约{{newHouse.total}}万</view>
+	</view>
+</view>
+<view class="jg20"></view>
+<!-- 第二块 -->
+<view class='house2 pad20'>
+  <view class='h2-text'>
+    <text>开盘时间</text>
+    <text>2018年6月16日</text>
+  </view>
+  <view class='h2-text'>
+    <text>具体位置</text>
+    <text>{{newHouse.shi}}{{newHouse.qu}}{{newHouse.position}}</text>
+  </view>
+</view>
+<!-- 第二块 -->
+<!-- 第三块 -->
+<view class="jg20"></view>
+<view class='house3 pad20'>
+  <view class='h3-title'>在售户型</view>
+  <view class='h3-btm'>
+    <scroll-view scroll-x>
+      <view class='h3-btm1' wx:for="{{huxing}}" wx:key="huxing">
+        <image src='{{item.image}}' data-index="{{index}}" bindtap="previewImage"></image>
+        <view class='h3-b-t1'>{{item.name}}</view>
+        <view class='h3-b-t2'>
+          <text>{{item.area}}㎡</text>
+          <text>约{{item.total}}万</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<!-- 第三块 -->
+<!-- 第四块 -->
+<view class="jg20"></view>
+<view class='house4 pad20'>
+ <view class='h4-title'>楼盘卖点</view>
+ <view class='h4-text'>
+  <text>交通配套</text>
+  <text>{{newHouse.jiaotong}}</text>
+ </view>
+ <view class='h4-text'>
+  <text>教育资源</text>
+  <text>{{newHouse.jiaoyu}}</text>
+ </view>
+ <view class='h4-text'>
+  <text>医疗健康</text>
+  <text>{{newHouse.yiliao}}</text>
+ </view>
+ <view class='h4-text'>
+  <text>商场购物</text>
+  <text>{{newHouse.gouwu}}</text>
+ </view>
+ <view class='h4-text'>
+  <text>生活娱乐</text>
+  <text>{{newHouse.yule}}</text>
+ </view>
+</view>
+<!-- 第四块 -->
+<!-- 第五块 -->
+<view class="jg20"></view>
+<view class='house5 pad20'>
+  <view class='h5-title'>推荐楼盘</view>
+  <view class='h5-btm'>
+    <scroll-view scroll-x>
+      <navigator url='/pages/newhouse/newhouse?shopId={{item.id}}' class='h5-btm1' wx:for="{{tuijian}}" wx:key="tuijian">
+        <image src='{{hostImg}}{{item.image}}'></image>
+        <view class='h5-b-t1 ellis-m'>{{item.name}}</view>
+        <view class='h5-b-t2'>
+          <text>约{{item.total}}万</text>
+        </view>
+      </navigator>
+    </scroll-view>
+  </view>
+</view>
+<!-- 第三块 -->
+
+
+<view class="marb80"></view>
+<view class="contact">
+	<view class="c-phone">
+		{{newHouse.businesser}}：{{newHouse.businesser_tel}}
+	</view>
+	<view class="c-name">
+		<view bindtap='bindcall'><image src="../../img/phone.png"></image>立即联系</view>
+	</view>
+</view>
+

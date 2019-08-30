@@ -1,0 +1,12 @@
+<view class="newsl-title arrow" bindtap="newslshow">
+	{{newstitle}}
+</view>
+<view class="newsl" wx:if="{{newlshow}}">
+	<view wx:for="{{newsname}}" data-index="{{index}}" bindtap="newdj" >{{item}}</view>
+</view>
+<view class="jg20"></view>
+<view class="newsl-l">
+	<view class="ellis-m" wx:for="{{newslist}}">
+		<navigator url="/pages/news/news?newsid={{item.id}}">{{item.name}}</navigator>
+	</view>
+</view>

@@ -1,0 +1,8 @@
+<!--pages/gsjj/gsjj.wxml-->
+<view class='gsjj pad20'>
+  <view class='title'>{{detail.name}}</view>
+  <image src='{{imgUrl+detail.image}}'></image>
+  <view class='detail'>
+    {{detail.content}}
+  </view>
+</view>

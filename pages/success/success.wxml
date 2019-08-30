@@ -1,0 +1,78 @@
+<loading wx:if="{{loading1||loading2}}">加载中</loading>
+<view class="shop-tab">
+	<view class="tab1" data-index="0" bindtap="shop_tab">
+		行业<text>▲</text>
+	</view>
+	<view class="tab1" data-index="1" bindtap="shop_tab">
+		区域<text>▲</text>
+	</view>
+	<view class="tab1" data-index="2" bindtap="shop_tab">
+		面积<text>▲</text>
+	</view>
+	<view class="tab1" data-index="3" bindtap="shop_tab">
+		更多<text>▲</text>
+	</view>
+</view>
+<view class="tabs">
+	<view class="hangye" wx:if="{{tabnum == 0}}">
+		<view class="tabs1-1">
+			<view wx:for="{{hangye}}" data-num="{{index}}" bindtap="hytap">{{item.name}}</view>
+		</view>
+		<view class="tabs1-2">
+			<view wx:for="{{hangye2}}" data-id="{{item.id}}" bindtap="hyfl2">{{item.name}}</view>
+		</view>
+	</view>
+	<view class="tabs1" wx:if="{{tabnum == 1}}">
+		<view data-qy="" bindtap="qy">全部</view>
+		<view data-qy="思明区" bindtap="qy">思明区</view>
+		<view data-qy="海沧区" bindtap="qy">海沧区</view>
+		<view data-qy="湖里区" bindtap="qy">湖里区</view>
+		<view data-qy="集美区" bindtap="qy">集美区</view>
+		<view data-qy="同安区" bindtap="qy">同安区</view>
+		<view data-qy="翔安区" bindtap="qy">翔安区</view>
+		<view data-qy="杏林区" bindtap="qy">杏林区</view>
+	</view>
+	<view class="tabs1" wx:if="{{tabnum == 2}}">
+		<view wx:for="{{mianji}}" data-id="{{item.id}}" bindtap="mjtap">{{item.name}}</view>
+	</view>
+	<view class="tabs2" wx:if="{{tabnum == 3}}" bindtap="tabs2">
+		<view class="tabs2-1">
+			<view class="tb2-zj">
+				<text class="mianji">租金</text>
+				<view class="mj-s">
+					<view wx:for="{{zujin}}" data-id="{{item.id}}" bindtap="zjtap">{{item.name}}</view>
+				</view>
+			</view>
+		</view>
+
+	</view>
+</view>
+<view class="jg20"></view>
+<!-- 在转商铺 -->
+<navigator url="/pages/successxq/successxq?shopId={{item.id}}" wx:for="{{suclist}}" wx:if="{{suclist.length > 0}}">
+	<view class="zbtm1">
+		<view class="i4-img">
+			<view class="i4-img">
+				<image src="{{uploadimg+item.pic}}"></image>
+				<!-- <view>精选</view> -->
+			</view>
+		</view>
+		<view class="dp-text">
+			<view class="h3">
+				<navigator href="#">{{item.title}}({{item.beizhu}}天转让成功)</navigator>
+			</view>
+			<view class="ellis-m h4">{{item.mianji}}㎡ - {{item.address}}</view>
+			<view class="h5"><text>{{item.price}}</text>元/月</view>
+		</view>
+	</view>
+</navigator>
+<view class='fenye' wx:if="{{suclist.length > 0}}">
+  <view class='prev' bindtap='bindprev'>上一页</view>
+  <view class='first' bindtap='bindfirst'>首页</view>
+  <view class='page1'>{{p}}/{{totalpage}}</view>
+  <view class='last' bindtap='bindlast'>尾页</view>
+  <view class='next' bindtap='bindnext'>下一页</view>
+</view>
+<view class="spnull" wx:if="{{suclist.length <= 0}}">
+	没有找到相关信息！
+</view>

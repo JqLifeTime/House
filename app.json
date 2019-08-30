@@ -1,0 +1,70 @@
+{
+  "pages":[
+    "pages/lead/lead",
+    "pages/index/index",
+    "pages/denglu/denglu",
+    "pages/logs/logs",
+    "pages/shoplist/shoplist",
+    "pages/release/release",
+    "pages/user/user",
+    "pages/shops/shops",
+    "pages/releases/releases",
+    "pages/zhuce/zhuce",
+    "pages/newslist/newslist",
+    "pages/news/news",
+    "pages/fabu/fabu",
+    "pages/zdxz/zdxz",
+    "pages/zdxzxq/zdxzxq",
+    "pages/sousuo/sousuo",
+    "pages/change/change",
+    "pages/video/video",
+    "pages/wanshan/wanshan",
+    "pages/success/success",
+    "pages/successxq/successxq",
+    "pages/Record/Record",
+    "pages/maps/maps",
+    "pages/newhouse/newhouse",
+    "pages/Calculator/Calculator",
+    "pages/nhouseList/nhouseList",
+    "pages/rent/rent",
+    "pages/rentDetail/rentDetail",
+    "pages/gsjj/gsjj"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "博涵房产",
+    "navigationBarTextStyle":"black"
+  },
+	"tabBar":{
+		"list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+			"iconPath": "img/shouye2.png",
+      "selectedIconPath": "img/shouye1.png"
+    }, {
+      "pagePath": "pages/shoplist/shoplist",
+      "text": "二手房",
+      "iconPath":"img/shop2.png",
+      "selectedIconPath": "img/shop1.png"
+    },{
+      "pagePath": "pages/releases/releases",
+      "text": "发布",
+      "iconPath": "img/fabu2.png",
+      "selectedIconPath": "img/fabu1.png"
+    },{
+      "pagePath": "pages/user/user",
+      "text": "我的",
+      "iconPath": "img/me2.png",
+      "selectedIconPath": "img/me1.png"
+    }],
+    "color": "#666",
+    "selectedColor": "#E32F2F",
+    "backgroundColor": "#ffffff"
+	},
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

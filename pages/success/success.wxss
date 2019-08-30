@@ -1,0 +1,203 @@
+/* pages/success/success.wxss */
+.shop-tab{
+	display: flex;
+}
+.tab1{
+	flex: 1;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	height: 80rpx;
+	line-height: 80rpx;
+	font-size: 30rpx;
+	color: #666;
+	border-top: 1rpx solid #F5F5F5;
+	border-bottom: 1rpx solid #F5F5F5;
+}
+.tab1>text{
+	transform: rotateX(180deg);
+}
+
+
+.tabs{
+	position: relative;
+	padding: 0 20rpx;
+}
+.tabs1{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top:0;
+	left: 0;
+	padding-bottom: 20rpx;
+	box-shadow: 0 10rpx 10rpx rgba(0,0,0,.1);
+  z-index: 999;
+}
+.tabs1>view{
+	height: 70rpx;
+	line-height: 70rpx;
+	padding-left: 35rpx;
+	border-bottom: 1rpx dashed #CCCCCC;
+	background: #FFFFFF;
+	font-size: 28rpx;
+	color: #999999;
+}
+.tabs2{
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top:0;
+	left: 0;
+	/* padding-bottom: 20rpx; */
+	background: rgba(0,0,0,.5);
+  z-index: 999;
+}
+.tabs2 .tabs2-1{
+	/* display: flex; */
+	background: #FFFFFF;
+	/* flex-wrap: wrap; */
+	float: right;
+	width: 550rpx;
+	height: 100%;
+}
+.tabs2 .tabs2-1>.tb2-mj>.mj-s,.tabs2 .tabs2-1>.tb2-zj>.mj-s{
+	clear: both;
+}
+.tabs2 .tabs2-1>.tb2-mj,.tabs2 .tabs2-1>.tb2-zj{
+	overflow: hidden;
+}
+.tabs2 .tabs2-1>.tb2-mj>.mj-s>view{
+	float: left;
+	padding: 10rpx 20rpx;
+	height: 42rpx;
+	font-size: 30rpx;
+	background: #F5F5F5;
+	margin: 8rpx;
+}
+.tabs2 .tabs2-1>.tb2-zj>.mj-s>view{
+	float: left;
+	padding: 10rpx 20rpx;
+	height: 42rpx;
+	font-size: 30rpx;
+	background: #F5F5F5;
+	margin: 8rpx;
+}
+
+.mianji{
+	font-size: 30rpx;
+	font-weight: bold;
+	padding: 15rpx;
+	clear: both;
+}
+.zhuan{
+	padding-bottom: 40rpx;
+}
+.zhuan-title,.zhao-title,.zixun-title{
+	height: 70rpx;
+	line-height: 65rpx;
+	font-size: 34rpx;
+	font-weight: bold;
+	border-bottom: 1rpx solid #CCCCCC;
+	display: flex;
+	justify-content: space-between;
+}
+.zhuan-title>navigator,.zhao-title>navigator,.zixun-title>navigator{
+	font-size: 30rpx;
+	font-weight: 100;
+	color: #999;
+}
+
+.zbtm1{
+	padding: 30rpx 20rpx;
+	height: 142rpx;
+	display: flex;
+	border-bottom: 1rpx solid #CCCCCC;
+}
+.zbtm1 .i4-img{
+	position: relative;
+	width: 230rpx;
+}
+.zbtm1 .i4-img>view{
+	width: 70rpx;
+	height: 35rpx;
+	line-height: 35rpx;
+	font-size: 28rpx;
+	text-align: center;
+	color: white;
+	background: #FF0000;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.zbtm1 .i4-img image{
+	width: 190rpx;
+	height: 150rpx;
+	margin-right: 20rpx;
+}
+.dp-text{
+	width: 450rpx;
+}
+.dp-text .h3>navigator{
+	width: 100%;
+	font-size: 34rpx;
+	line-height: 34rpx;
+	color: #000;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.dp-text .h4{
+	font-size: 26rpx;
+	line-height: 70rpx;
+	color: #999;
+}
+.dp-text .h5{
+	color: #999;
+	font-size: 26rpx;
+	padding-top: 0rpx;
+	line-height: 60rpx;
+}
+.dp-text .h5 text{
+	font-size: 30rpx;
+	font-weight: 700;
+	color: #ff0000;
+}
+
+.hangye{
+	
+	width: 100%;
+	display: flex;
+	position: absolute;
+	top:0;
+	left: 0;
+	padding-bottom: 20rpx;
+	box-shadow: 0 10rpx 10rpx rgba(0,0,0,.1);
+	z-index: 999;
+	background: #FFFFFF;
+}
+.hangye .tabs1-1{
+	height: auto;
+	flex: 1;
+	padding: 0 20rpx;
+	background: #FFFFFF;
+	font-size: 28rpx;
+	color: #999999;
+}
+.hangye .tabs1-1>view,.hangye .tabs1-2>view{
+	height: 70rpx;
+	line-height: 70rpx;
+	border-bottom: 1rpx dashed #CCCCCC;
+}
+.hangye .tabs1-2{
+	flex: 1;
+	padding: 0 20rpx;
+	background: #F5F5F5;
+	font-size: 28rpx;
+	color: #666;
+}
+
+.spnull{
+	padding: 100rpx;
+	text-align: center;
+	font-size: 30rpx;
+}

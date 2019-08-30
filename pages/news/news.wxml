@@ -1,0 +1,10 @@
+<view class="news-title">
+	{{newsdata[0].name}}
+</view>
+<view class="news-data">
+	新闻来源：<text>博涵房产</text>   发布时间：<text>{{newsdata[0].ctime}}</text>
+</view>
+<view class="new-text">
+	<image src="{{hostImg + newsdata[0].image}}"></image>
+	{{newsdata[0].content}}
+</view>

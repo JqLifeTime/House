@@ -1,0 +1,6 @@
+<view class='vid'>
+  <view class='vid-text'>{{videos.title}}</view>
+  <view class='vid1'>
+    <video src='{{hostImg+videos.video}}'></video>
+  </view>
+</view>

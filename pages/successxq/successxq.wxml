@@ -1,0 +1,171 @@
+<view class="lunbo">
+	<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+			<swiper-item wx:for="{{shopsimg}}">
+				<image src="{{uploadimg+item}}" class="slide-image" />
+			</swiper-item>
+	</swiper>
+</view>
+<view class="shop2">
+	<view class="shop2-title">
+		<view class="st2-h3">{{shops.title}}({{shops.beizhu}}天转让成功)</view>
+		<view class="st2-h4">更新时间：{{shops.ctime}} 浏览量：{{shops.pv}}</view>
+		<view class="title-zj">
+			<view class="shop2-t1">
+				<view class="shop2-p">面积</view>
+				<view class="shop2-h4"><text>{{shops.mianji}}㎡</text></view>
+			</view>
+			<view class="shop2-t1">
+				<view class="shop2-p">租金</view>
+				<view class="shop2-h4"><text>{{shops.price}}</text>元/月</view>
+			</view>
+			<view class="shop2-t1">
+				<view class="shop2-p">转让费</view>
+				<view class="shop2-h4"><text>{{shops.transfer}}</text>万元</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="jg20"></view>
+<!-- 第三块 -->
+<view class="shop3 pad20">
+	<view class="shop3-title">
+		<view class="shop3-t1">
+			<view class="shop3-h3">是否空转</view>
+			<view class="shop3-h4">{{kongzhuan}}</view>
+		</view>
+		<view class="shop3-t1">
+			<view class="shop3-h3">类型</view>
+			<view class="shop3-h4">{{shops.mid[0].name}}</view>
+		</view>
+		<view class="shop3-t1">
+			<view class="shop3-h3">行业</view>
+			<view class="shop3-h4">{{shops.did[0].name}}-{{shops.did1[0].name}}</view>
+		</view>
+	</view>
+	<view class="shop3-btm">
+		<image src="../../img/address.png"></image>{{shops.address}}
+	</view>
+  <view class='fuwu'>
+    <image src="../../img/renwu.png"></image>
+    服务人员：{{shops.fuwu_name}}
+    </view>
+  <view class='fuwu'>
+    <image src="../../img/renwu.png"></image>
+    服务人员电话：{{shops.fuwu_tel}}
+  </view>
+</view>
+<!-- 第三块 -->
+<view class="jg20"></view>
+<!-- 第四快 -->
+<view class="shop4">
+	<view class="stitle">
+		<view class="stitle-h3">设备配套</view>
+	</view>
+	<view class="shop4-btm">
+		<view class="shop4-btm1">
+			<view>
+				<image src="{{imgid[0] == true ? '../../img/shangshui1.png' : '../../img/shangshui.png'}}"></image>
+				<text class="{{imgid[0] == true ? 'ptactive' : ''}}">上水</text>
+			</view>
+			<view>
+				<image src="{{imgid[1] == true ? '../../img/xiashui1.png' : '../../img/xiashui.png'}}"></image>
+				<text class="{{imgid[1] == true ? 'ptactive' : ''}}">下水</text>
+			</view>
+			<view>
+				<image src="{{imgid[2] == true ? '../../img/dianya1.png' : '../../img/dianya.png'}}"></image>
+				<text class="{{imgid[2] == true ? 'ptactive' : ''}}">380V</text>
+			</view>
+			<view>
+				<image src="{{imgid[3] == true ? '../../img/yantong1.png' : '../../img/yantong.png'}}"></image>
+				<text class="{{imgid[3] == true ? 'ptactive' : ''}}">烟管道</text>
+			</view>
+			<view>
+				<image src="{{imgid[4] == true ? '../../img/guandao1.png' : '../../img/guandao.png'}}"></image>
+				<text class="{{imgid[4] == true ? 'ptactive' : ''}}">排污管道</text>
+			</view>
+			<view>
+				<image src="{{imgid[5] == true ? '../../img/tingche1.png' : '../../img/tingche.png'}}"></image>
+				<text class="{{imgid[5] == true ? 'ptactive' : ''}}">停车位</text>
+			</view>
+			<view>
+				<image src="{{imgid[6] == true ? '../../img/tianranqi1.png' : '../../img/tianranqi.png'}}"></image>
+				<text class="{{imgid[6] == true ? 'ptactive' : ''}}">天然气</text>
+			</view>
+			<view>
+				<image src="{{imgid[7] == true ? '../../img/waibai1.png' : '../../img/waibai.png'}}"></image>
+				<text class="{{imgid[7] == true ? 'ptactive' : ''}}">外摆区</text>
+			</view>
+			<view>
+				<image src="{{imgid[8] == true ? '../../img/kongtiao1.png' : '../../img/kongtiao.png'}}"></image>
+				<text class="{{imgid[8] == true ? 'ptactive' : ''}}">空调暖气</text>
+			</view>
+			<view>
+				<image src="{{imgid[9] == true ? '../../img/dianti1.png' : '../../img/dianti.png'}}"></image>
+				<text class="{{imgid[9] == true ? 'ptactive' : ''}}">电梯</text>
+			</view>
+			<view>
+				<image src="{{imgid[10] == true ? '../../img/zhengjian1.png' : '../../img/zhengjian.png'}}"></image>
+				<text class="{{imgid[10] == true ? 'ptactive' : ''}}">证件齐全</text>
+			</view>
+			<view>
+				<image src="{{imgid[11] == true ? '../../img/huo1.png' : '../../img/huo.png'}}"></image>
+				<text class="{{imgid[11] == true ? 'ptactive' : ''}}">可明火</text>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="jg20"></view>
+<view class="shop4">
+	<view class="stitle">
+		<view class="stitle-h3">周边配套</view>
+	</view>
+	<view class="shop4-btm">
+		<view class="shop4-btm1">
+			<view>
+				<image src="{{qid[0] == true ? '../../img/yiyuan1.png' : '../../img/yiyuan.png'}}"></image>
+				<text class="{{qid[0] == true ? 'ptactive' : ''}}">医院</text>
+			</view>
+			<view>
+				<image src="{{qid[1] == true ? '../../img/chezhan1.png' : '../../img/chezhan.png'}}"></image>
+				<text class="{{qid[1] == true ? 'ptactive' : ''}}">车站</text>
+			</view>
+			<view>
+				<image src="{{qid[2] == true ? '../../img/loufang1.png' : '../../img/loufang.png'}}"></image>
+				<text class="{{qid[2] == true ? 'ptactive' : ''}}">办公楼</text>
+			</view>
+			<view>
+				<image src="{{qid[3] == true ? '../../img/xuexiao1.png' : '../../img/xuexiao.png'}}"></image>
+				<text class="{{qid[3] == true ? 'ptactive' : ''}}">学校</text>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="jg20"></view>
+<view class="shop4">
+	<view class="stitle">
+		<view class="stitle-h3">商铺描述</view>
+	</view>
+	<view class="shop6-btm pad20">
+		{{shops.content}}
+	</view>
+</view>
+<view class="shop7">
+	<!-- <view>
+		<navigator href="#">我要分享</navigator>
+	</view> -->
+	<!-- <view class="sc-active">
+		<navigator href="#">我要收藏</navigator>
+	</view>
+	<view>
+		<navigator href="#">我要举报</navigator>
+	</view> -->
+</view>
+<view class="marb80"></view>
+<view class="contact">
+	<view class="c-phone">
+		{{shops.people}}：{{shops.tel}}
+	</view>
+	<view class="c-name">
+		<navigator href="#"><image src="../../img/phone.png"></image>立即联系</navigator>
+	</view>
+</view>

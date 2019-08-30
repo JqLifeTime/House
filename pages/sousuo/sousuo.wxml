@@ -1,0 +1,87 @@
+<view class="search df">
+    <view class="search-l">
+          <picker bindchange="bindPickerChange" value="{{index2}}" range="{{array2}}" name="gygx">
+            <view class="picker2 arrow">
+              {{array2[index2]}}
+            </view>
+          </picker>
+    </view>
+    <input class="df_1"  placeholder="请输入你要搜索的内容"  value="{{searchValue}}" bindinput="searchValueInput" />
+    <view class='ssbtn' bindtap="doSearch">搜索</view>
+</view>
+<!-- <view class="cont" wx:if="{{hotKeyShow}}">
+    <text class="font_14">热门搜索</text>  
+    <view class="w100">
+        <button wx:for="{{hotKeyList}}" wx:key="item" bindtap="doKeySearch" data-key="{{item.keyword}}">{{item.keyword}}</button>
+    </view>
+    <text class="font_14 mt10">历史搜索</text>
+    <view class="w100">
+        <button wx:for="{{historyKeyList}}" wx:key="item" bindtap="doKeySearch" data-key="{{item.keyword}}">{{item.keyword}}</button>
+    </view>
+</view> -->
+<view class="search_no" wx:if="{{control}}">
+    <text>没有找到相关房屋信息/(ㄒoㄒ)/~~</text>
+</view>
+<!-- 二手房 -->
+<view class='wrap' wx:if="{{index2 == 0}}">
+  <view class="shop"> 
+      <navigator url="/pages/shops/shops?shopId={{item.id}}" wx:for="{{productData}}">
+      	<view class="zbtm1">
+      		<view class="i4-img">
+      			<view class="i4-img">
+      				<image src="{{hostImg+item.image}}"></image>
+      			</view>
+      		</view>
+      		<view class="dp-text">
+      			<view class="h3">
+      				<navigator href="#">{{item.name}}</navigator>
+      			</view>
+      			<view class="ellis-m h4">{{item.area}}㎡ - {{item.position}}</view>
+      			<view class="h5"><text>{{item.total}}万元</text></view>
+      		</view>
+      	</view>
+      </navigator>
+  </view>
+</view>
+<!-- 出租房 -->
+<view class='wrap' wx:if="{{index2 == 1}}">
+  <view class="shop">
+      <navigator url="/pages/rentDetail/rentDetail?shopId={{item.id}}" wx:for="{{productData}}">
+      	<view class="zbtm1">
+      		<view class="i4-img">
+      			<view class="i4-img">
+      				<image src="{{hostImg+item.image}}"></image>
+      			</view>
+      		</view>
+      		<view class="dp-text">
+      			<view class="h3">
+      				<navigator href="#">{{item.name}}</navigator>
+      			</view>
+      			<view class="ellis-m h4">{{item.area}}㎡ - {{item.position}}</view>
+      			<view class="h5"><text>{{item.price}}元/月</text></view>
+      		</view>
+      	</view>
+      </navigator>
+  </view>
+</view>
+<!-- 新房 -->
+<view class='wrap' wx:if="{{index2 == 2}}">
+  <view class="shop"> 
+      <navigator url="/pages/newhouse/newhouse?shopId={{item.id}}" wx:for="{{productData}}">
+      	<view class="zbtm1">
+      		<view class="i4-img">
+      			<view class="i4-img">
+      				<image src="{{hostImg+item.image}}"></image>
+      			</view>
+      		</view>
+      		<view class="dp-text">
+      			<view class="h3">
+      				<navigator href="#">{{item.name}}</navigator>
+      			</view>
+      			<view class="ellis-m h4"><image src='../../img/address.png'></image> {{item.position}}</view>
+      			<view class="h5"><text>约{{item.total}}万元</text></view>
+      		</view>
+      	</view>
+      </navigator>
+  </view>
+</view>

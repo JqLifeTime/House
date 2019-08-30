@@ -1,0 +1,79 @@
+<!--pages/Calculator/Calculator.wxml-->
+<view class='ji'>
+  <view class='ji-title'>二手房计算器</view>
+  <view class='ji-btm'>
+    <view class='mianji'>
+      <text>平米单价</text>
+      <view>
+        <input type='number' bindinput='bindDanjia' value='{{danjia}}'></input>元/平米
+      </view>
+    </view>
+    <view class='mianji'>
+      <text>面积</text>
+      <view>
+        <input type='number'bindinput='bindMianji' value='{{mianji}}'></input>平米
+      </view>
+    </view>
+    <view class='shoufu'>
+      <text>首付</text>
+      <view>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker arrow1">
+            {{array[index]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class='shoufu'>
+      <text>贷款期限</text>
+      <view>
+        <picker bindchange="bindYearsChange" value="{{yearsIndex}}" range="{{years}}">
+          <view class="picker arrow1" style='color:red'>
+            {{years[yearsIndex]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <!-- ********* -->
+    <view class='mianji'>
+      <text>年利率</text>
+      <view>
+        <input type='text' bindinput='bindLIlv' value='{{InterestRate[RateIndex]}}'></input>%
+      </view>
+      <!-- <view>
+        <picker bindchange="bindYearsChange" value="{{RateIndex}}" range="{{InterestRate}}">
+          <view class="picker arrow1">
+            {{InterestRate[RateIndex]}}
+          </view>
+        </picker>
+      </view> -->
+    </view>
+    <!-- ********* -->
+    <view class='begin'>
+      <view class='reset' bindtap='bindReset'>重置</view>
+      <view class='start' bindtap='bindStart'>计算</view>
+    </view>
+  </view>
+</view>
+<!-- 计算结果 -->
+<view class='Result'>
+  <view class='result-title'>计算结果<text>(结果仅供参考)</text></view>
+  <view class='result-btm'>
+    <view class='rbtm1'>
+      <view>贷款总额</view>
+      <view>{{totalMoney}} 元</view>
+    </view>
+    <view class='rbtm1'>
+      <view>还款月数</view>
+      <view>{{yearsNum[yearsIndex]*12}} 月</view>
+    </view>
+    <view class='rbtm1'>
+      <view>首月还款</view>
+      <view>{{firstMonth}} 元</view>
+    </view>
+    <view class='rbtm1'>
+      <view>总利息</view>
+      <view>{{totalRate}} 元</view>
+    </view>
+  </view>
+</view>

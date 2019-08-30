@@ -1,0 +1,236 @@
+/* pages/rentDetail/rentDetail */
+
+.lunbo{
+	width: 100%;
+	height: 500rpx;
+}
+swiper{
+	width: 100%;
+	height: 100%;
+}
+.lunbo swiper-item .slide-image{
+	width: 100%;
+	height: 100%;
+}
+.ptactive{
+	font-size: 30rpx !important;
+	color: #000000 !important;
+}
+.shop2-title{
+	text-align: center;
+} 
+.shop2-title .st2-h3{
+	font-size: 32rpx;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    padding-top: 20rpx;
+    line-height: 72rpx;
+	
+}
+.shop2-title .st2-h4{
+	font-size: 28rpx;
+	color: #999;
+	text-align: center;
+	line-height: 40rpx;
+}
+.title-zj{
+	padding: 40rpx 0;
+	display: flex;
+	height: 100rpx;
+}
+.title-zj .shop2-t1{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.shop2-t1>.shop2-p{
+	font-size: 28rpx;
+	color: #999;
+}
+.shop2-t1>.shop2-h4{
+	font-size: 26rpx;
+	color: #f00;
+}
+.shop2-t1>.shop2-h4>text{
+	font-size: 34rpx;
+	font-weight: bold;
+	color: #f00;
+}
+
+/* 第三快 */
+.shop3{
+	padding-bottom: 10rpx;
+}
+.shop3-title{
+	display: flex;
+	padding: 50rpx 0;
+	border-bottom: 1rpx solid #CCCCCC;
+}
+.shop3-t1{
+	height: 100rpx;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+  overflow: hidden;
+}
+.shop3-t1 .shop3-h3{
+	font-size:28rpx;
+	color: #999;
+}
+.shop3-t1 .shop3-h4{
+	font-size: 28rpx;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+	color: #000;
+}
+.shop3-btm{
+	line-height: 80rpx;
+	font-size: 28rpx;
+  border-top: 1rpx solid #ccc;
+	/* margin-bottom: .2rpx; */
+}
+.shop3-btm image{
+	width: 35rpx;
+	height: 35rpx;
+	margin-right: 10rpx;
+	vertical-align: middle;
+}
+
+/* 第四快 */
+.stitle{
+	line-height: 72rpx;
+    height: 72rpx;
+    border-bottom: 4rpx solid #ddd;
+	margin: 0 20rpx;
+}
+.stitle .stitle-h3{
+	width: 130rpx;
+	font-size: 30rpx;
+	text-align: center;
+	color: #333;
+	font-weight: bold;
+	border-bottom: 4rpx solid #fa4f4f;
+}
+.shop4-btm>.shop4-btm1{
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 35rpx;
+}
+.shop4-btm>.shop4-btm1>view{
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 105rpx;
+	margin-top: 35rpx;
+}
+.shop4-btm>.shop4-btm1>view>image{
+	width: 50rpx;
+	height: 50rpx;
+}
+.shop4-btm>.shop4-btm1>view>text{
+	font-size: 30rpx;
+	color: #C2C2C2;
+}
+
+.shop6-btm{
+	font-size: 30rpx;
+	line-height: 50rpx;
+}
+
+.shop7{
+	padding: 20rpx;
+	display: flex;
+	justify-content: center;
+
+}
+.shop7>view{
+	width: 30%;
+	height: 50rpx;
+	text-align: center;
+	line-height: 50rpx;
+	border: 1rpx solid #DDDDDD;
+	border-radius: 8rpx;
+}
+.shop7>view navigator{
+	display: block;
+	font-size: 30rpx;
+}
+.sc-active{
+	border: 1rpx solid #f00 !important;
+}
+.sc-active navigator{
+	color: #f00 !important;
+}
+
+
+.contact{
+	width: 100%;
+	height: 90rpx;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	left: 0rpx;
+	bottom: 0rpx;
+	border-top: 1rpx solid #f1f1f1;
+}
+.contact .c-phone{
+	width: 65%;
+	text-align: center;
+	height: 100%;
+	line-height: 90rpx;
+	color: #333333;
+	font-size: 28rpx;
+	font-weight: bold;
+	background: #FFFFFF;
+}
+.contact .c-name{
+	width: 35%;
+	height: 100%;
+	line-height: 90rpx;
+	background: #E32F2F;
+	text-align: center;
+}
+.contact>.c-name>view{
+	font-size: 24rpx;
+	color: #FFFFFF;
+}
+.contact .c-name view image{
+	width: 30rpx;
+	height: 30rpx;
+	vertical-align: middle;
+	margin-right: 10rpx;
+}
+
+.marb80{
+	width: 100%;
+	height: 80rpx;
+}
+/* 房屋信息 */
+.xinxi{
+  padding: 20rpx 50rpx;
+  border-top: 1rpx solid #ccc;
+  display: flex;
+  flex-wrap: wrap;
+}
+.xinxi-1{
+  width: 50%;
+  font-size: 28rpx;
+  color: #000;
+  text-align: left;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.xinxi-1 text{
+  font-size: 28rpx;
+  color: #999;
+}

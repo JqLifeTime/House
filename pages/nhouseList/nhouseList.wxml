@@ -1,0 +1,29 @@
+<!--pages/nhouseList/nhouseList.wxml-->
+<!-- 在转商铺 -->
+<navigator url="/pages/newhouse/newhouse?shopId={{item.id}}" wx:for="{{houselist}}" wx:if="{{houselist.length > 0}}">
+	<view class="zbtm1">
+		<view class="i4-img">
+			<view class="i4-img">
+				<image src="{{hostimg+item.image}}"></image>
+				<!-- <view>精选</view> -->
+			</view>
+		</view>
+		<view class="dp-text">
+			<view class="h3">
+				<navigator href="#">{{item.name}}</navigator>
+			</view>
+			<view class="ellis-m h4"><image src='../../img/address.png'></image>{{item.position}}</view>
+			<view class="h5"><text>约{{item.total}}万元</text></view>
+		</view>
+	</view>
+</navigator>
+<view class='fenye' wx:if="{{houselist.length > 0}}">
+  <view class='prev' bindtap='bindprev'>上一页</view>
+  <view class='first' bindtap='bindfirst'>首页</view>
+  <view class='page1'>{{p}}/{{totalpage}}</view>
+  <view class='last' bindtap='bindlast'>尾页</view>
+  <view class='next' bindtap='bindnext'>下一页</view>
+</view>
+<view class="spnull" wx:if="{{houselist.length <= 0}}">
+	没有找到相关信息！
+</view>

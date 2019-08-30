@@ -1,0 +1,39 @@
+<view wx:if="{{userId != 0}}">
+  <view class="me1">
+    <view class="view-img">
+      <image src="../../img/me_bg.png"></image>
+    </view>
+    <view class="img-wz">
+      <view class="me1-img">
+        <image src="{{userinfo1.avatarUrl}}"></image>
+      </view>
+      <view class="img-h3">欢迎您，博涵会员：<text>{{userId}}</text></view>
+      <view class="me1-btn">
+        <view class="btn-p">
+          <navigator url="../wanshan/wanshan">修改个人资料</navigator>
+        </view>
+        <view class="btn-p">
+          <navigator url="../change/change">修改密码</navigator>
+        </view>
+        <view class="btn-p">
+          <view bindtap='tuichu'>退出</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="me2">
+    <navigator url='../Record/Record'>
+      <view class="arrow3">信息记录</view>
+    </navigator>
+  </view>
+  <view class="me3">
+    <view class="fabu">
+      <navigator open-type="switchTab" url="/pages/releases/releases">
+        <view class="zhao">
+          <image src="../../img/fbxinxi.jpg"></image>
+          发布二手房/出租信息
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

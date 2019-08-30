@@ -1,0 +1,63 @@
+/* pages/nhouseList/nhouseList.wxss */
+.zbtm1{
+	padding: 30rpx 20rpx;
+	height: 142rpx;
+	display: flex;
+	border-bottom: 1rpx solid #CCCCCC;
+}
+.zbtm1 .i4-img{
+	position: relative;
+	width: 230rpx;
+}
+.zbtm1 .i4-img>view{
+	width: 70rpx;
+	height: 35rpx;
+	line-height: 35rpx;
+	font-size: 28rpx;
+	text-align: center;
+	color: white;
+	background: #FF0000;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.zbtm1 .i4-img image{
+	width: 190rpx;
+	height: 150rpx;
+	margin-right: 20rpx;
+}
+.dp-text{
+	width: 450rpx;
+}
+.dp-text .h3>navigator{
+	width: 100%;
+	font-size: 34rpx;
+	line-height: 34rpx;
+	color: #000;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.dp-text .h4{
+	font-size: 26rpx;
+	line-height: 70rpx;
+	color: #999;
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+}
+.dp-text .h4>image{
+  width: 25rpx;
+  height: 24rpx;
+}
+.dp-text .h5{
+	color: #999;
+	font-size: 26rpx;
+	padding-top: 0rpx;
+	line-height: 60rpx;
+}
+.dp-text .h5 text{
+	font-size: 30rpx;
+	font-weight: 700;
+	color: #ff0000;
+}

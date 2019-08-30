@@ -1,0 +1,114 @@
+page{
+	background: #F5F5F5;
+}
+.dl1{
+	padding: 70rpx 0;
+	
+}
+.dl1-cen{
+	width: 500rpx;
+	margin: 0 auto;
+	padding: 50rpx;
+	background: #FFFFFF;
+	box-shadow: 0 0 25rpx rgba(0,0,0,.1);
+}
+.dl-title{
+	font-size: 30rpx;
+    color: #333;
+    font-weight: bold;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40rpx;
+}
+.dl-title a{
+	font-size: 30rpx;
+	color: #FF0000;
+}
+.dl-shuru>.dl-p{
+	display: flex;
+	align-items: center;
+	height: 75rpx;
+	line-height: 75rpx;
+	box-sizing: border-box;
+	border: 1rpx solid #CCCCCC;
+	border-radius: 5rpx;
+	margin-bottom: 25rpx;
+}
+.dl-shuru>.dl-p>input{
+	font-size: 30rpx;
+}
+.dl-shuru>.dl-p>image{
+	width: 25rpx;
+	height: 25rpx;
+	vertical-align:middle;
+	margin-left: 10rpx;
+}
+
+.dl-shuru .dl-p>input{
+	padding-left: 10rpx;
+	width: 340rpx;
+}
+
+.dl-shuru .dl-h6{
+	margin: 40rpx 0;
+	height: 65rpx;
+	line-height: 65rpx;
+	text-align: center;
+	border-radius: 5rpx;
+	background: #E32F30;
+	font-size: 30rpx;
+	color: white;
+}
+
+.dl-shuru .dl-h5{
+	border: 1rpx dashed #CCCCCC;
+	margin-bottom: 15rpx;
+}
+.dl-shuru .dl-h4{
+	font-size: 30rpx;
+	font-weight: bold;
+  display: flex;
+}
+.dl-shuru>.dl-h4>navigator{
+	font-size: 30rpx;
+	font-weight: bold;
+	color: #FF0000;
+}
+
+
+
+
+/* 注册页面 */
+.dl-shuru>.dl-h4>text{
+	font-size: 30rpx;
+	color: blue;
+}
+.dl-shuru .yanzheng{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20rpx;
+}
+.dl-shuru>.yanzheng>.dl-p{
+	width: 300rpx;
+	height: 65rpx;
+	line-height: 65rpx;
+	box-sizing: border-box;
+	border: 1rpx solid #CCCCCC;
+	border-radius: 5rpx;
+}
+.dl-shuru>.yanzheng>.dl-p input{
+	width: 250rpx;
+	margin-left: 5rpx;
+}
+.dl-shuru>.yanzheng>.dl-h4{
+	width: 125rpx;
+	height: 65rpx;
+	line-height: 65rpx;
+	text-align: center;
+	background: #E32F30;
+	border-radius: 5rpx;
+}
+.dl-shuru .yanzheng>.dl-h4{
+	color: white;
+}

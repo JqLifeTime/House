@@ -1,0 +1,142 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.2",
+	"appid": "wx50182ff9f667155d",
+	"projectname": "%E5%8D%9A%E6%B6%B5%E6%88%BF%E4%BA%A7",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 15,
+			"list": [
+				{
+					"id": 0,
+					"name": "店铺列表",
+					"pathName": "pages/denglu/denglu",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "店铺详情",
+					"pathName": "pages/shops/shops",
+					"query": "shopId=2"
+				},
+				{
+					"id": 2,
+					"name": "新房",
+					"pathName": "pages/newhouse/newhouse",
+					"query": "shopId=1968"
+				},
+				{
+					"id": 3,
+					"name": "店铺详情",
+					"pathName": "pages/zdxzxq/zdxzxq",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "计算器",
+					"pathName": "pages/Calculator/Calculator",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "新房列表",
+					"pathName": "pages/nhouseList/nhouseList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "zc",
+					"pathName": "pages/zhuce/zhuce",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "我的",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": 8,
+					"name": "发布信息",
+					"pathName": "pages/releases/releases",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "news",
+					"pathName": "pages/news/news",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "发布",
+					"pathName": "pages/fabu/fabu",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的2",
+					"pathName": "pages/releases/releases",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "zc",
+					"pathName": "pages/wanshan/wanshan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 14,
+					"name": "计算器",
+					"pathName": "pages/Calculator/Calculator",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "pages/sousuo/sousuo",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

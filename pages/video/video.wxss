@@ -1,0 +1,12 @@
+.vid{
+  padding: 20rpx;
+}
+.vid-text{
+  font-size: 30rpx;
+  text-align: center;
+  padding: 10rpx 0;
+}
+.vid1 video{
+  width: 100%;
+  height: 400rpx;
+}

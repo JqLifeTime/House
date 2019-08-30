@@ -1,0 +1,316 @@
+<view wx:if="{{isuser != 0}}">
+  <view class="stitle">
+    <view class="stitle-h3">发布{{index2 == 1 || index2 == 0 ? "二手房" : "出租"}}信息</view>
+  </view>
+  <view>
+    <form action="" method="post" bindsubmit="back_hou">
+      <view class="fa1-btm1">
+        <view class="fa1-bl">
+          <text>*</text>出租出售：
+        </view>
+        <view class="fa1-dplx">
+          <picker bindchange="bindPickerChange" value="{{index2}}" range="{{array2}}" name="gygx">
+            <view class="picker2 arrow">
+              {{array2[index2]}}
+            </view>
+          </picker>
+        </view>     
+      </view>
+      <view class="fa1-btm">
+        <!-- <view class="fa1-btm1" wx:if="{{index1 == 1}}">
+          <view class="fa1-bl">
+            店名：
+          </view>
+          <view class="fa1-br">
+            <input type="text" name="dm" />
+          </view>
+        </view> -->
+        <view class="fa1-btm1">
+          <view class="fa1-bl">
+            <text>*</text>居室：
+          </view>
+          <view class="fa1-dplx">
+            <picker bindchange="bindhuxing" value="{{index3}}" range="{{array3}}" name="gygx">
+              <view class="picker2 arrow">
+                {{array3[index3]}}
+              </view>
+            </picker>
+          </view>
+        </view>
+        <!-- 厅室 -->
+        <view class="fa1-btm1">
+          <view class="fa1-bl">
+            <text></text>厅堂：
+          </view>
+          <view class="fa1-dplx">
+            <picker bindchange="bindTing" value="{{index4}}" range="{{array4}}" name="gygx">
+              <view class="picker2 arrow">
+                {{array4[index4]}}
+              </view>
+            </picker>
+          </view>
+        </view>
+        <!-- 卫 -->
+        <view class="fa1-btm1">
+          <view class="fa1-bl">
+            <text></text>卫生间：
+          </view>
+          <view class="fa1-dplx">
+            <picker bindchange="bindWei" value="{{index5}}" range="{{array5}}" name="gygx">
+              <view class="picker2 arrow">
+                {{array5[index5]}}
+              </view>
+            </picker>
+          </view>
+        </view>
+        <!-- 手机号码 -->
+        <view class="fa1-btm1">
+          <view class="fa1-bl">
+            <text>*</text>手机号码：
+          </view>
+          <view class="fa1-br">
+            <input type="number" name="sjhm" />
+          </view>
+        </view>
+        <view class="fa1-btm1" wx:if="{{index2 == 1}}">
+          <view class="fa1-bl">
+            <text>*</text>总价：
+          </view>
+          <view class="fa1-br">
+            <input type="text" name="zongjia" bindinput='bindZj' />
+          </view>
+          <view class='mjdw'>万</view>
+        </view>
+        <view class="fa1-btm1">
+          <view class="fa1-bl">
+            <text>*</text>面积：
+          </view>
+          <view class="fa1-br">
+            <input type="number" name="mj" bindinput='bindMj' disabled='{{isdisable}}' />
+          </view>
+          <view class='mjdw'>㎡</view>
+        </view>
+        
+        <view class="fa1-btm1">
+          <view class="fa1-bl">
+            <text>*</text>单价/租金：
+          </view>
+          <view class="fa1-br">
+            <input type="number" name="zj" value='{{danjia}}' />
+          </view>
+          <view class='mjdw'>元</view>
+        </view>
+        <!-- 整租合租 -->
+        <view class="fa1-btm4" wx:if="{{index2 == 2}}">
+          <view class="fa1-bl">
+            <text>*</text>整租/合租：
+          </view>
+          <view class="fa1-br">
+            <radio-group class="radio-group1" bindchange="zhengzuChange">
+              <label class="radio">
+                <radio value="0" checked='checked'/>不限
+              </label>
+              <label class="radio">
+                <radio value="1" />整租
+              </label>
+              <label class="radio">
+                <radio value="2" />合租
+              </label>
+            </radio-group>
+          </view>
+        </view>
+        <view class="fa1-btm1"  wx:if="{{index2 == 2}}">
+          <view class="fa1-bl">
+            <text>*</text>租金方式：
+          </view>
+          <view class="fa1-br">
+            <input type="text" name="zjtype" />
+          </view>
+        </view>
+
+        <!-- 期望区域 -->
+        <view class="quyu">
+          <view class="fa1-btm1">
+            <view class="fa1-bl">
+              <text>*</text>省份选择：
+            </view>
+            <view class="fa1-qwqy">
+              <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" name="qwqy">
+                <view class="picker3 arrow">
+                  {{region[0]}}-{{region[1]}}-{{region[2]}}
+                </view>
+              </picker>
+            </view>
+          </view>
+        </view>
+        <!-- 期望区域 -->
+        <view class="fa1-btm1">
+          <view class="fa1-bl">
+            <text>*</text>详细地址：
+          </view>
+          <view class="fa1-br">
+            <input type="text" name="xxdz" />
+          </view>
+        </view>
+        <!-- 朝向 -->
+        <view class="fa1-btm1">
+          <view class="fa1-bl">
+            <text></text>朝向：
+          </view>
+          <view class="fa1-br">
+            <input type="text" name="chaox" />
+          </view>
+        </view>
+        <!-- 楼层 -->
+        <view class="fa1-btm1">
+          <view class="fa1-bl">
+            <text></text>楼层：
+          </view>
+          <view class="fa1-br">
+            <input type="text" name="louc" />
+          </view>
+        </view>
+        <!-- 楼型 -->
+        <view class="fa1-btm1">
+          <view class="fa1-bl">
+            <text></text>楼型：
+          </view>
+          <view class="fa1-br">
+            <input type="text" name="loux" />
+          </view>
+        </view>
+        <!-- 装修 -->
+        <view class="fa1-btm1">
+          <view class="fa1-bl">
+            <text></text>装修：
+          </view>
+          <view class="fa1-br">
+            <input type="text" name="zhuangx" />
+          </view>
+        </view>
+        <!-- 年代 -->
+        <view class="fa1-btm1">
+          <view class="fa1-bl">
+            <text></text>年代：
+          </view>
+          <view class="fa1-br">
+            <input type="text" name="niand" />
+          </view>
+        </view>
+        <!-- 产权 -->
+        <view class="fa1-btm1">
+          <view class="fa1-bl">
+            <text></text>产权：
+          </view>
+          <view class="fa1-br">
+            <input type="text" name="chanq" />
+          </view>
+        </view>
+        <!-- 看房 -->
+        <view class="fa1-btm1">
+          <view class="fa1-bl">
+            <text></text>看房：
+          </view>
+          <view class="fa1-br">
+            <input type="text" name="kanf" />
+          </view>
+        </view>
+        <!-- 入住 -->
+        <view class="fa1-btm1">
+          <view class="fa1-bl">
+            <text></text>入住：
+          </view>
+          <view class="fa1-br">
+            <input type="text" name="ruz" />
+          </view>
+        </view>
+        
+        <view class="fa1-btm2">
+          <view class="fa1-bl">
+            <text>*</text>配套设备：
+          </view>
+          <view class="fuxuan1">
+            <checkbox-group class="group" bindchange="checkboxChange" name="ptsb">
+              <view class="label-1" wx:for="{{checkboxItems}}">
+                <label>
+                  <checkbox data-id="{{fxbollean[index]}}" value="{{item.id}}" checked="{{fxbollean[index]}}" data-indx="{{index}}"></checkbox>
+                  <text class="label-1__text">{{item.name}}</text>
+                </label>
+              </view>
+            </checkbox-group>
+            <view class="all" bindtap="all">全选</view>
+            <view class="unall" bindtap="unall">取消</view>
+          </view>
+        </view>
+        <view class="fa1-btm2">
+          <view class="fa1-bl">
+            <text>*</text>商圈配套：
+          </view>
+          <view class="fuxuan1">
+            <checkbox-group class="group" bindchange="sqpt" name="sqpt">
+              <view class="label-1" wx:for="{{sqpt}}">
+                <label>
+                  <checkbox value="{{item.id}}" checked="{{fxb2[index]}}"></checkbox>
+                  <!-- <view class="label-1__icon">
+                  <view class="label-1__icon-checked" style="opacity:{{item.checked ? 1: 0}}"></view>
+                </view> -->
+                  <text class="label-1__text">{{item.name}}</text>
+                </label>
+              </view>
+            </checkbox-group>
+            <view class="all" bindtap="all1">全选</view>
+            <view class="unall" bindtap="unall1">取消</view>
+          </view>
+        </view>
+
+        <view class="fa1-btm1">
+          <view class="fa1-bl">
+            <text>*</text>标题描述：
+          </view>
+          <view class="fa1-br">
+            <input type="text" name="biaoti" />
+          </view>
+        </view>
+
+        <view class="fa1-btm1">
+          <view class="fa1-bl">
+            <text></text>卖点：
+          </view>
+          <view class="fa1-br">
+            <input type="text" name="keywords" />
+          </view>
+        </view>
+
+        <view class="fa1-btm2">
+          <view class="fa1-bl">
+            <text>*</text>具体描述：
+          </view>
+          <view class="fa1-br">
+            <textarea rows="5" name="yaoqiu"></textarea>
+          </view>
+        </view>
+        <view class="fa1-btm5">
+          <view class="fa1-bl"></view>
+          <view class="fa1-chose">
+            <view class="fa1-1">
+              <view class="choseimg" bindtap="chose" name="imgs">点击上传图片</view>
+              <!-- <view class="sc" bindtap="shangchuan">上传图片</view> -->
+            </view>
+
+            <view class="yl">
+              <block wx:for="{{imgurl}}">
+                <image src="{{uploadimg}}{{item}}"></image>
+              </block>
+            </view>
+          </view>
+        </view>
+        <view class="fa1-btm1">
+          <view class="fa1-bl"></view>
+          <view class="fa1-sub">
+            <button formType="submit">发布{{index2 == 1 || index2 == 0 ? "二手房" : "出租"}}信息</button>
+          </view>
+        </view>
+      </view>
+    </form>
+  </view>
+</view>

@@ -1,0 +1,191 @@
+/* pages/search/search.wxss */
+.search{
+  width: 712rpx;
+    padding: 20rpx 20rpx;
+    background: #f5f5f5; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 999;
+    display: flex;
+}
+.wrap{
+  margin-top: 110rpx;
+  overflow: hidden;
+}
+.search input{
+    width: 380rpx;
+    /* margin-left: 25rpx; */
+    border-radius: 10rpx;
+    background: #fff;
+    border: none;
+    font-size: 30rpx;
+    padding:7rpx 25rpx;
+    margin: 0 10rpx;
+    }
+.search button{
+    line-height:30px;
+    width: 200rpx;
+    background: none;
+    text-align: center;
+    border: none;
+    padding: 3px;
+    font-size: 30rpx;
+    background: #fff;
+}
+.search view{
+	/* width: 170rpx; */
+  padding-left: 5px;
+	height: 64rpx;
+	line-height: 64rpx;
+	text-align: center;
+	background: #FFFFFF;
+	/* color: white; */
+	border-radius: 10rpx;
+	font-size: 30rpx;
+  /* margin-left: 20rpx; */
+}
+.ssbtn{
+  width: 100rpx;
+	height: 64rpx;
+	line-height: 64rpx;
+	text-align: center;
+	background: #FFFFFF;
+  border-radius: 10rpx;
+	font-size: 30rpx;
+  margin-left: 20rpx;
+}
+.search button::after{
+    content: none;
+}
+.searchcion{
+    width: 24px;
+    height: 24px;
+    text-align: center
+}
+.cont{
+     width: 94%;
+     padding: 3%;     
+     margin-top: 100rpx;
+}
+.w100{ 
+    width: 100%;
+    padding-bottom: 10px;
+}
+.w100 button{
+    text-align: center;
+    line-height: 20px;
+    margin: 3% 2% 0 0;
+    display: inline-table;
+    padding:5rpx 10rpx;
+    font-size: 12px;
+}
+.shop{
+    margin-bottom:10px;
+    background:#fff;
+}
+.shop:nth-child(even){
+    margin-right: 2%;
+}
+.sh_slt{
+    width: 100%;
+    height: 370rpx;
+    overflow: hidden;
+}
+.sp_text{
+    float: left;
+    line-height: 25px;
+    width: 92%;
+    padding: 4%;
+    }
+.sp_tit{
+    width: 100%;
+    overflow: hidden;
+    font-size: 14px;
+}
+.sp_jg{
+    width: 100%;
+    overflow: hidden;
+    font-size: 14px;
+    color: #fc0628;
+    line-height: 30px;
+}
+.search_no{
+  width: 100%;
+  height: 100vh;
+	text-align: center;
+	font-size: 30rpx;
+  margin: auto;
+}
+.search_no text{
+  width: 80%;
+  line-height: 100vh;
+  display: block;
+  margin: auto;
+}
+
+.zbtm1{
+	padding: 30rpx;
+	height: 142rpx;
+	display: flex;
+	border-bottom: 1rpx solid #CCCCCC;
+}
+.zbtm1 .i4-img{
+	position: relative;
+	width: 230rpx;
+}
+.zbtm1 .i4-img>view{
+	width: 70rpx;
+	height: 35rpx;
+	line-height: 35rpx;
+	font-size: 28rpx;
+	text-align: center;
+	color: white;
+	background: #FF0000;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.zbtm1 .i4-img image{
+	width: 190rpx;
+	height: 150rpx;
+	margin-right: 20rpx;
+}
+.dp-text{
+	width: 450rpx;
+}
+.dp-text .h3>navigator{
+	width: 100%;
+	font-size: 34rpx;
+	line-height: 34rpx;
+	color: #000;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.dp-text .h4{
+	font-size: 26rpx;
+	line-height: 70rpx;
+	color: #999;
+}
+.dp-text .h5{
+	color: #999;
+	font-size: 26rpx;
+	padding-top: 0rpx;
+	line-height: 60rpx;
+}
+.dp-text .h5 text{
+	font-size: 30rpx;
+	font-weight: 700;
+	color: #ff0000;
+}
+.dp-text .h4>image {
+  width:25rpx;
+  height:24rpx;
+}
+.search-l{
+  width: 150rpx;
+  height: 80rpx;
+  margin-right: 10rpx;
+}

@@ -1,0 +1,127 @@
+<loading wx:if="{{loading1||loading2}}">加载中</loading>
+<view class="shop-tab">
+  <view class="tab1 {{tabnum == 0 ? 'tabActive' : ''}}" data-index="0" bindtap="shop_tab">
+    区域
+    <text>▲</text>
+  </view>
+  <view class="tab1 {{tabnum == 1 ? 'tabActive' : ''}}" data-index="1" bindtap="shop_tab">
+    价格
+    <text>▲</text>
+  </view>
+  <view class="tab1 {{tabnum == 2 ? 'tabActive' : ''}}" data-index="2" bindtap="shop_tab">
+    面积
+    <text>▲</text>
+  </view>
+  <view class="tab1 {{tabnum == 4 ? 'tabActive' : ''}}" data-index="4" bindtap="shop_tab">
+    更多
+    <text>▲</text>
+  </view>
+</view>
+<view class="tabs">
+  <view class="tabs1" wx:if="{{tabnum == 0}}">
+    <view data-qy="" data-ind="0" bindtap="qy" class='{{qyInd == 0 ? "active-two" : ""}}'>全部</view>
+    <view data-qy="金水区" data-ind="1" bindtap="qy" class='{{qyInd == 1 ? "active-two" : ""}}'>金水区</view>
+    <view data-qy="中原区" data-ind="2" bindtap="qy" class='{{qyInd == 2 ? "active-two" : ""}}'>中原区</view>
+    <view data-qy="二七区" data-ind="3" bindtap="qy" class='{{qyInd == 3 ? "active-two" : ""}}'>二七区</view>
+    <view data-qy="管城回族区" data-ind="4" bindtap="qy" class='{{qyInd == 4 ? "active-two" : ""}}'>管城回族区</view>
+    <view data-qy="上街区" data-ind="5" bindtap="qy" class='{{qyInd == 5 ? "active-two" : ""}}'>上街区</view>
+    <view data-qy="惠济区" data-ind="6" bindtap="qy" class='{{qyInd == 6 ? "active-two" : ""}}'>惠济区</view>
+    <view data-qy="中牟县" data-ind="7" bindtap="qy" class='{{qyInd == 7 ? "active-two" : ""}}'>中牟县</view>
+    <view data-qy="巩义市" data-ind="8" bindtap="qy" class='{{qyInd == 8 ? "active-two" : ""}}'>巩义市</view>
+    <view data-qy="新密市" data-ind="9" bindtap="qy" class='{{qyInd == 9 ? "active-two" : ""}}'>新密市</view>
+    <view data-qy="新郑市" data-ind="10" bindtap="qy" class='{{qyInd == 10 ? "active-two" : ""}}'>新郑市</view>
+    <view data-qy="登封市" data-ind="11" bindtap="qy" class='{{qyInd == 11 ? "active-two" : ""}}'>登封市</view>
+  </view>
+  <view class="tabs1" wx:if="{{tabnum == 1}}">
+    <view data-zj="" bindtap="zongjia" class='{{zjInd == 0 ? "active-two" : ""}}'>全部</view>
+    <view data-zj="{{item.id}}" bindtap="zongjia" wx:for="{{zongjia}}" class='{{zjInd == item.id ? "active-two" : ""}}'>{{item.mixprice}}-{{item.maxprice}}万元</view>
+  </view>
+  <view class="tabs1" wx:if="{{tabnum == 2}}">
+    <view data-id="" bindtap="mjtap" class='{{mjInd == 0 ? "active-two" : ""}}'>不限</view>
+          <view wx:for="{{mianji}}" data-id="{{item.id}}" class='{{mjInd == item.id ? "active-bg" : ""}}' bindtap="mjtap">{{item.mixarea}}-{{item.maxarea}}㎡</view>
+  </view>
+  <!-- <view class="hangye" wx:if="{{tabnum == 1&&id == 1}}">
+		<view class="tabs1-1">
+			<view wx:for="{{hangye}}" data-id="{{item.id}}" data-num="{{index}}" bindtap="hytap">{{item.name}}       </view>
+		</view>
+		<view class="tabs1-2">
+      <view data-id='' bindtap="hyfl2">不限</view>
+			<view wx:for="{{hangye2}}" data-id="{{item.id}}" bindtap="hyfl2">{{item.name}}</view>
+		</view>
+	</view> -->
+  <!-- <view class="tabs1" wx:if="{{tabnum == 3 &&id != 1}}">
+    <view wx:for="{{dplx}}" bind-id="{{item.id}}" bindtap="dplx">{{item.name}}</view>
+  </view> -->
+
+  <view class="tabs2" wx:if="{{tabnum == 4}}" bindtap="tabs2">
+    <view class="tabs2-1">
+      <!-- 室 -->
+      <view class="tb2-mj">
+        <text class="mianji">居室</text>
+        <view class="mj-s">
+          <view data-ts="" bindtap="ts" class='{{tsInd == 0 ? "active-bg" : ""}}'>全部</view>
+          <view data-ts="1" bindtap="ts" class='{{tsInd == 1 ? "active-bg" : ""}}'>一室</view>
+          <view data-ts="2" bindtap="ts" class='{{tsInd == 2 ? "active-bg" : ""}}'>两室</view>
+          <view data-ts="3" bindtap="ts" class='{{tsInd == 3 ? "active-bg" : ""}}'>三室</view>
+          <view data-ts="4" bindtap="ts" class='{{tsInd == 4 ? "active-bg" : ""}}'>四室</view>
+          <view data-ts="5" bindtap="ts" class='{{tsInd == 5 ? "active-bg" : ""}}'>四室以上</view>
+        </view>
+      </view>
+      <!-- 厅 -->
+      <view class="tb2-mj">
+        <text class="mianji">厅堂</text>
+        <view class="mj-s">
+          <view data-ting="" bindtap="ting" class='{{tingInd == 0 ? "active-bg" : ""}}'>全部</view>
+          <view data-ting="1" bindtap="ting" class='{{tingInd == 1 ? "active-bg" : ""}}'>一厅</view>
+          <view data-ting="2" bindtap="ting" class='{{tingInd == 2 ? "active-bg" : ""}}'>两厅</view>
+          <view data-ting="3" bindtap="ting" class='{{tingInd == 3 ? "active-bg" : ""}}'>三厅</view>
+          <view data-ting="4" bindtap="ting" class='{{tingInd == 4 ? "active-bg" : ""}}'>四厅</view>
+          <view data-ting="5" bindtap="ting" class='{{tingInd == 5 ? "active-bg" : ""}}'>四厅以上</view>
+        </view>
+      </view>
+      <!-- 卫 -->
+      <view class="tb2-mj">
+        <text class="mianji">卫生间</text>
+        <view class="mj-s">
+          <view data-wc="" bindtap="wc" class='{{wcInd == 0 ? "active-bg" : ""}}'>全部</view>
+          <view data-wc="1" bindtap="wc" class='{{wcInd == 1 ? "active-bg" : ""}}'>一卫</view>
+          <view data-wc="2" bindtap="wc" class='{{wcInd == 2 ? "active-bg" : ""}}'>两卫</view>
+          <view data-wc="3" bindtap="wc" class='{{wcInd == 3 ? "active-bg" : ""}}'>三卫</view>
+          <view data-wc="4" bindtap="wc" class='{{wcInd == 4 ? "active-bg" : ""}}'>四卫</view>
+          <view data-wc="5" bindtap="wc" class='{{wcInd == 5 ? "active-bg" : ""}}'>四卫以上</view>
+        </view>
+      </view>
+      <!-- 卫 -->
+    </view>
+  </view>
+</view>
+<view class="jg20"></view>
+<!-- 在转商铺 -->
+<navigator url="/pages/shops/shops?shopId={{item.id}}" wx:for="{{shoplist}}" wx:if="{{shoplist.length > 0}}">
+  <view class="zbtm1">
+    <view class="i4-img">
+      <view class="i4-img">
+        <image src="{{hostImg+item.image}}"></image>
+        <!-- <view>精选</view> -->
+      </view>
+    </view>
+    <view class="dp-text">
+      <view class="h3">
+        <navigator href="#">{{item.name}}</navigator>
+      </view>
+      <view class="ellis-m h4">{{item.area}}㎡ - {{item.position}}</view>
+      <view class="h5">
+        <text>{{item.total}}</text>万元</view>
+    </view>
+  </view>
+</navigator>
+<view class='fenye' wx:if="{{shoplist.length > 0}}">
+  <view class='prev' bindtap='bindprev'>上一页</view>
+  <view class='first' bindtap='bindfirst'>首页</view>
+  <view class='page1'>{{p}}/{{totalpage}}</view>
+  <view class='last' bindtap='bindlast'>尾页</view>
+  <view class='next' bindtap='bindnext'>下一页</view>
+</view>
+<view class="spnull" wx:if="{{shoplist.length <= 0}}">
+  没有找到相关信息！
+</view>

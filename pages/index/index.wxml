@@ -1,0 +1,159 @@
+<loading wx:if="{{loading1||loading2}}">加载中</loading>
+<!-- <view class="user-dask" wx-if="{{!authori}}">
+	<view class="user1">
+		<view class="reque">请求获取用户信息</view>
+		<button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+	</view>
+</view> -->
+<!-- banner图 -->
+<view class='search'>
+  <navigator url='/pages/sousuo/sousuo' class='search-d'>
+    <image src='../../img/sousuo.png'></image>
+    <text>搜索房屋</text>
+  </navigator>
+</view>
+<view class="banner">
+  <swiper autoplay='true' circular="true">
+    <swiper-item wx:for="{{imglist}}" wx:key="imglist">
+      <image src='{{hostImg}}{{item.image}}'></image>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 公告快讯 -->
+<view class='gonggao'>
+  <view class='gg-cen' bindtap='bindGg'>
+    <image src='../../img/gonggao.png'></image>
+    <view class='gg-swip'>
+      <swiper autoplay='true' vertical="true" circular="true">
+        <swiper-item class="ellis-m" wx:for="{{hyzx}}" wx:key="hyzx">{{item.name}}</swiper-item>
+      </swiper>
+    </view>
+  </view>
+</view>
+<view class="nav">
+	<view bindtap="sp">
+		<view class="nav1">
+			<image src="../../img/m_n1.png"></image>
+			<view>二手房</view>
+		</view>
+	</view>
+	<navigator url="/pages/nhouseList/nhouseList?id=4">
+		<view class="nav1">
+			<image src="../../img/m_n2.png"></image>
+			<view>新房</view>
+		</view>
+	</navigator>
+	<navigator url="/pages/rent/rent">
+		<view class="nav1">
+			<image src="../../img/m_n3.png"></image>
+			<view>出租</view>
+		</view>
+	</navigator>
+	<navigator url='/pages/newslist/newslist'>
+		<view class="nav1">
+			<image src="../../img/m_n4.png"></image>
+			<view>资讯</view>
+		</view>
+	</navigator>
+  <navigator url='/pages/gsjj/gsjj'>
+		<view class="nav1">
+			<image src="../../img/m_n5.png"></image>
+			<view>公司简介</view>
+		</view>
+	</navigator>
+</view>
+
+<view class="jg20"></view>
+<!-- 二手房 -->
+<view class="zhuan">
+	<view class="zhuan-title">
+		二手房（{{sechouse[0].count}}套）<navigator open-type='switchTab' url='/pages/shoplist/shoplist'>更多</navigator>
+	</view>
+  <!-- 横排 -->
+  <view class='row'>
+    <scroll-view scroll-x>
+      <navigator url="/pages/shops/shops?shopId={{item.id}}" class='h3-btm1' wx:for="{{hostTwo}}" wx:key="index">
+        <image src='{{hostImg+item.image}}' data-index="{{index}}"></image>
+        <view class='h3-b-t1 ellis-m'>{{item.name}}</view>
+        <view class='h3-b-t2'>
+          <text>{{item.area}}㎡</text>
+          <text>{{item.total}}万</text>
+        </view>
+        <view class='host'>精选</view>
+      </navigator>
+    </scroll-view>
+  </view>
+  <!-- 竖排 -->
+	<view class="zhuan-btm">
+		<navigator url="/pages/shops/shops?shopId={{item.id}}" wx:for="{{sechouse}}" wx:key="sechouse">
+			<view class="zbtm1">
+				<view class="i4-img">
+					<view class="i4-img">
+						<image src="{{hostImg+item.image}}"></image>
+					</view>
+				</view>
+				<view class="dp-text">
+					<view class="h3">
+						<navigator href="#">{{item.name}}</navigator>
+					</view>
+					<view class="ellis-m h4">{{item.area}}㎡ - {{item.position}}</view>
+					<view class="h5"><text>{{item.total}}</text>万元</view>
+				</view>
+			</view>
+		</navigator>
+	</view>
+</view>
+<view class="jg20"></view>
+<!-- 新房 -->
+<view class="zhuan">
+	<view class="zhuan-title">
+		新房<navigator url="/pages/nhouseList/nhouseList">更多</navigator>
+	</view>
+  <!-- 横排 -->
+  <view class='row'>
+    <scroll-view scroll-x>
+      <navigator url="/pages/newhouse/newhouse?shopId={{item.id}}" class='h3-btm1' wx:for="{{hostNew}}" wx:key="index">
+        <image src='{{hostImg+item.image}}' data-index="{{index}}" bindtap="previewImage"></image>
+        <view class='h3-b-t1'>{{item.name}}</view>
+        <view class='h3-b-t2'>
+          <text>{{item.total}}㎡</text>
+          <text></text>
+        </view>
+        <view class='h3-b-t3'>
+          <text>约{{item.total}}万</text>
+        </view>
+        <view class='host'>精选</view>
+      </navigator>
+    </scroll-view>
+  </view>
+  <!-- 竖排 -->
+	<view class="zhuan-btm">
+		<navigator url="/pages/newhouse/newhouse?shopId={{item.id}}" wx:for="{{newhouse}}" wx:key="newhouse">
+			<view class="zbtm1">
+				<view class="i4-img">
+					<view class="i4-img">
+						<image src="{{hostImg+item.image}}"></image>
+					</view>
+				</view>
+				<view class="dp-text">
+					<view class="h3">
+						<navigator href="#">{{item.name}}</navigator>
+					</view>
+					<view class="ellis-m h4"><image src='../../img/address.png'></image>{{item.position}}</view>
+					<view class="h5"><text>约{{item.total}}万元</text></view>
+				</view>
+			</view>
+		</navigator>
+	</view>
+</view>
+<view class="jg20"></view>
+<view class="zixun pad20">
+	<view class="zixun-title">
+		行业资讯<navigator url="/pages/newslist/newslist">更多</navigator>
+	</view>
+	<view class="zixun-btm">
+		<view class="zixun-1 ellis-m" wx:for="{{hyzx}}" wx:key="hyzx">
+			<navigator url="/pages/news/news?newsid={{item.id}}">{{item.name}}</navigator>
+		</view>
+	</view>
+</view>

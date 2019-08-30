@@ -1,0 +1,25 @@
+<view class="dl1">
+	<view class="dl1-cen">
+		<view class="dl-title">
+			修改密码
+			<navigator url="/pages/denglu/denglu">登录</navigator>
+		</view>
+		<form method="post" bindsubmit="xiugai">
+		<view class="dl-shuru">
+			<view class="dl-p">
+				<image src="../../img/renwu.png"></image>
+				<input type="text" name="phone" placeholder="请输入手机号" maxlength="11" placeholder-style="font-size:30rpx"/>
+			</view>
+			<view class="dl-p">
+				<image src="../../img/mima.png"></image><input type="text" name="mima" placeholder="请输入原始密码" placeholder-style="font-size:30rpx"/>
+			</view>
+      <view class="dl-p">
+				<image src="../../img/mima.png"></image><input type="text" name="xmima" placeholder="请输入新密码" placeholder-style="font-size:30rpx"/>
+			</view>
+			<button class="dl-h6" formType="submit">确认修改</button>
+			<view class="dl-h5"></view>
+			<view class="dl-h4">已注册会员，忘记密码！</view>
+		</view>
+		</form>
+	</view>
+</view>

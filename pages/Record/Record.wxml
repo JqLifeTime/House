@@ -1,0 +1,36 @@
+<view class='zhaodian'>
+  <view class='zdtitle'>
+    发布二手房记录
+  </view>
+  <view class='zdlist' wx:for="{{twohouse}}" wx:key="twohouse">
+    <view class='biaoti'>
+      <text>标题：{{item.name}}</text>
+      <text>{{item.miaoshu}}</text>
+    </view>
+    <view class='mjzj'>
+      <text>面积：{{item.area}}㎡</text>
+      <text>总价：{{item.total}}万元</text>
+    </view>
+    <view class='biaoti'>
+      时间：{{item.publish_time}}
+    </view>
+  </view>
+</view>
+<view class='zhaodian'>
+  <view class='zdtitle'>
+    发布租房记录
+  </view>
+  <view class='zdlist' wx:for="{{zufang}}" wx:key="zufang">
+    <view class='biaoti'>
+      <text>标题：{{item.name}}</text>
+      <text style='color:#25B125'>{{item.miaoshu}}</text>
+    </view>
+    <view class='mjzj'>
+      <text>面积：{{item.area}}㎡</text>
+      <text>租金：{{item.price}}元/月</text>
+    </view>
+    <view class='biaoti'>
+      时间：{{item.publish_time}}
+    </view>
+  </view>
+</view>

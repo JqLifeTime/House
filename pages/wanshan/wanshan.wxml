@@ -1,0 +1,112 @@
+<view class="stitle">
+	<view class="stitle-h3">修改个人信息</view>
+</view>
+<view>
+	<form action="" method="post" bindsubmit="grxx">
+	<view class="fa1-btm">
+		<view class="fa1-btm1">
+			<view class="fa1-bl">
+				<text>*</text>用户名：
+			</view>
+			<view class="fa1-br">
+				<view class='yhm'>{{yhm}}<text>不可修改</text></view>
+			</view>
+		</view>
+		
+		<view class="fa1-btm1">
+			<view class="fa1-bl">
+				<text>*</text>真实姓名：
+			</view>
+			<view class="fa1-br">
+				<input type="text" name="xingming" value='{{userInfo.name}}' />
+			</view>
+		</view>
+    
+    <view class="fa1-btm1">
+			<view class="fa1-bl">
+				<text>*</text>性别：
+			</view>
+			<view class="fa1-br">
+				<radio-group class="radio-group" bindchange="radioChange" name="sex">
+					<label class="radio">
+						<radio value="1" checked='{{userInfo.sex == 1 ? true :false}}' />男
+            <radio value="2" checked='{{userInfo.sex == 2 ? true :false}}' />女
+            <radio value="3" checked='{{userInfo.sex == 3 ? true :false}}' />保密
+					</label>
+				</radio-group>
+			</view>
+		</view>
+    <view class="fa1-btm1">
+			<view class="fa1-bl">
+				<text></text>年龄：
+			</view>
+			<view class="fa1-br">
+				<input type="number" name="ages" value='{{userInfo.age == null ? "" : userInfo.age}}' />
+			</view>
+		</view>
+    <view class="fa1-btm1">
+			<view class="fa1-bl">
+				<text></text>微信：
+			</view>
+			<view class="fa1-br">
+				<input type="text" name="weixin" value='{{userInfo.wechat == null ? "" : userInfo.wechat}}' />
+			</view>
+		</view>
+    <view class="fa1-btm1">
+			<view class="fa1-bl">
+				<text></text>QQ：
+			</view>
+			<view class="fa1-br">
+				<input type="number" name="qq" value='{{userInfo.qq == null ? "" : userInfo.qq}}' />
+			</view>
+		</view>
+		<view class="fa1-btm1">
+			<view class="fa1-bl">
+				<text>*</text>手机号码：
+			</view>
+			<view class="fa1-br">
+				<input type="number" name="phone" value='{{userInfo.tel}}' />
+			</view>
+		</view>
+    <view class="fa1-btm1">
+			<view class="fa1-bl">
+				常用邮箱：
+			</view>
+			<view class="fa1-br">
+				<input type="text" name="email" />
+			</view>
+		</view>
+		
+		
+		<!-- 期望区域 -->
+		<view class="quyu">
+			<view class="fa1-btm1">
+				<view class="fa1-bl">
+					省份选择：
+				</view>
+				<view class="fa1-qwqy">
+					<picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" name="qwqy">
+						<view class="picker3 arrow">
+							{{region[0]}}-{{region[1]}}-{{region[2]}}
+						</view>
+					</picker>
+				</view>
+			</view>
+		</view>
+		<view class="fa1-btm2">
+			<view class="fa1-bl">
+				详细地址：
+			</view>
+			<view class="fa1-br">
+				<textarea type="text" name="xiangxi" value='{{userInfo.address == null ? "" : userInfo.address}}' ></textarea>
+			</view>
+		</view>
+		<view class="fa1-btm1">
+			<view class="fa1-bl"></view>
+			<view class="fa1-sub">
+				<button formType="submit">确认提交修改</button>
+			</view>
+		</view>
+	</view>
+	</form>
+</view>
